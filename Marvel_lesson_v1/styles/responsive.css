@@ -1,0 +1,41 @@
+.responsive{
+    max-width: 1920px;
+    width: 100%;
+    min-height: 720px;
+    background-color: #FAFAFA;
+    background-image: url(../assets/images/back_rsp.svg);
+    background-position: 30% ;
+    background-position-y:-20px;
+    background-repeat: no-repeat;
+    background-size: 80%;  
+}
+
+.responsive-title{
+    margin-top: 140px;
+    z-index: 2;
+}
+.responsive__content-container{
+    display: flex;
+    flex-direction: column ;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 380px;
+}
+
+.responsive__info{
+    max-width: 560px;
+    width: 100%;
+    margin-top:46px;
+}
+
+.responsive__list{
+    margin-top: 46px;
+}
+
+.responsive__list li{
+    margin-bottom: 10px;
+}
+
+.responsive__list li :last-child{
+    margin-bottom: 0;
+}

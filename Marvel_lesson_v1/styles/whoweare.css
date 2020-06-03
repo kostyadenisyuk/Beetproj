@@ -1,0 +1,9 @@
+.whoweare__content-container{
+    max-width: 1920px;
+    width: 100%;
+    min-height: 650px;
+    background-image: url(../assets/images/who_img.svg);
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+}
