@@ -1,0 +1,106 @@
+@import "../_colors";
+@import "../_mixins";
+@import "../_fonts";
+
+.provide{
+    width: 100%;
+    max-width: 1920px;
+
+    h3{
+        font-family: "HelveticaNeueLTPro-Lt";
+        font-size: 26px;
+        color: $white;
+    }
+
+    .provide__container{
+        font-family: "HelveticaNeueLTPro-Lt";
+    background-image: url(../../assets/images/backg_provide.svg);
+    min-height: 1670px;
+   background-size: cover;
+   position: relative;
+   z-index: 2;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    }
+
+    &__title{
+       
+        @include no-flex;
+        h2{
+            color:$white;
+            padding-top: 236px;
+            margin: 0;
+          
+        }
+
+        p{
+            margin-top: 0;
+            margin-bottom: 217px;
+
+            @media (max-width:1024px){ 
+                margin-bottom: 105px;
+             }
+        }
+    }
+
+    &__wrapper{
+        p{
+            max-width: 400px;
+            font-family: "HelveticaNeueLTPro-Lt";
+            font-size: 18px;
+            color: $text-2;
+            border: $border;
+
+            @media (max-width:1024px){
+                width: 100%;
+                max-width: 1000px;
+                margin-right:0;
+            }
+        }
+        @include center;
+        @media (max-width:1024px){ 
+           display: flex;
+           flex-direction: column;
+           
+          
+      }
+    }
+        
+       &__button{
+           width: 217px;
+           height: 64px;
+           background-color: $white;
+           font-family: "HelveticaNeueLTPro-Md";
+           font-size: 16px;
+           color:$black-2;
+           cursor: pointer;
+           margin-top: 481px;
+            text-transform: uppercase;
+           @media (max-width:1024px){
+               margin-top: 120px;
+           }
+       }
+        
+       
+    
+
+    &__wrapper--second{
+         margin: 0 80px;
+    }   
+
+    &__absolute{
+        z-index: -1;
+        position: absolute;
+      content: '';
+        width: 100%;
+        transform: translateY(60%);
+        left: 50px;
+     /*   clip: rect(auto, auto,110vh , auto); */
+        overflow: hidden;
+       
+        @media (max-width:1024px){ 
+            display: none;
+         }
+    }
+
+}

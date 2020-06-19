@@ -1,0 +1,78 @@
+@import "../_fonts";
+
+.home{
+   
+    &__title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 240px; /* */  
+        /* FONT*/
+       
+        p{
+            font-family: "Merriweather-LightItalic";
+            color:$gray-2;
+            font-size: 16px;
+            margin-top: 0;
+        }
+        
+        h1{
+            margin-bottom: 0;
+            font-family: "HelveticaNeueLTPro-Lt";
+        }
+
+        button{
+            width: 188px;
+            height: 57px;
+            border-radius:1px ;
+            border-color:$black-2; ;
+            text-transform: uppercase;
+            margin-top: 43px;
+            background-color: $white;
+            font-family: "Monserat";
+            font-size: 13px;
+            
+        }
+        button:hover{
+       
+            background-color: $gray-2;
+            color: red;
+            cursor: pointer;
+       
+    }
+    }
+    &__list-item--fr{
+        opacity: 33%;
+        margin-bottom: 12px;
+    }   
+
+    &__list-item--sc{
+        opacity: 66%;
+        margin-bottom: 12px;
+    }
+    
+   
+}
+
+.home__list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 240px;
+    align-items: center;
+    margin-bottom: 92px;
+    button{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $gray-3;
+        border:none;
+        cursor: pointer;
+        
+       
+    }
+  
+
+    
+}
+
