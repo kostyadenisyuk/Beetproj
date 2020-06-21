@@ -1,0 +1,103 @@
+@import "../_mixins";
+@import "../_fonts";
+@import "../_colors";
+
+.tourist {
+  &__container {
+    background-image: url("./../assets/images/tourist_bcimg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 730px;
+  }
+
+  &__title {
+    @include center;
+
+    h2 {
+      margin-top: 120px;
+      color: $white;
+      font-family: "Aleo";
+      font-size: 36px;
+      line-height: 26px;
+    }
+  }
+
+  &__info {
+    @include center;
+    margin-top: 94px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper--img {
+    img {
+      @media (max-width: 1024px) {
+        width: 550px;
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        width: 335px;
+        display: block;
+      }
+    }
+  }
+
+  &__wrapper--text {
+    max-width: 665px;
+    width: 100%;
+    min-height: 284px;
+    background-color: $black;
+    text-align: left;
+    padding-left: 63px;
+    padding-right: 54px;
+
+    @media (max-width: 1201px) {
+      padding-left: 30px;
+      padding-right: 25px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 495px;
+      margin-bottom: 40px; //TODO
+    }
+
+    @media (max-width: 768px) {
+      width: 280px;
+      margin-bottom: 40px; //TODO
+    }
+
+    h3 {
+      margin-top: 50px;
+      color: $white-3;
+      font-family: "Josefin";
+      font-size: 20px;
+      line-height: 26px;
+      text-transform: uppercase;
+
+      @media (max-width: 1201px) {
+        margin-top: 30px;
+      }
+    }
+
+    p {
+      margin-top: 33px;
+      color: $white-2;
+      font-family: "Josefin";
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    i {
+      color: $nav_col;
+      margin-right: 10px;
+      padding-bottom: 10px;
+      position: relative;
+      top: -10px;
+      font-size: 24px;
+    }
+  }
+}
