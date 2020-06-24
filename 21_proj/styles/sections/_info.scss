@@ -1,0 +1,67 @@
+@import "../_colors";
+
+.info__container {
+  min-height: 1330px;
+  background-color: $black;
+  background-image: url("./../assets/images/");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  position: relative;
+}
+
+.info {
+  max-width: 1920px;
+  width: 100%;
+  &__column--first {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    margin-left: 230px;
+
+    .paragraph_2011-12 {
+      margin-bottom: 250px;
+    }
+  }
+
+  &__column--second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 300px;
+    .paragraph_2012 {
+      margin-bottom: 350px;
+    }
+  }
+
+  h2 {
+    display: flex;
+    justify-content: flex-end;
+    color: $white-2;
+    max-width: 380px;
+    width: 100%;
+  }
+
+  p {
+    color: $gray-4;
+    max-width: 400px;
+    width: 100%;
+    min-height: 135px;
+  }
+
+  &__column-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .hr {
+    top: 0;
+
+    position: absolute;
+    z-index: 1;
+    left: calc(50% - 25px);
+    // transform: translateX(0, -50%);
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="172" height="172" viewBox="0 0 172 172">
+  <g id="Love" transform="translate(-459 -3527)">
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(459 3527)" fill="none" stroke="#fff" stroke-width="6">
+      <circle cx="86" cy="86" r="86" stroke="none"/>
+      <circle cx="86" cy="86" r="83" fill="none"/>
+    </g>
+    <path id="LINE_GRAPH" data-name="LINE GRAPH" d="M575.708,3604.466l-.03.021h0l-25.969,17.979,0,0a2.988,2.988,0,0,1-3.369.031h0l-.011-.007,0,0-13.42-8.947-13.9,8.177V3634h55a3,3,0,0,1,0,6H516a3,3,0,0,1-3-3v-48a3,3,0,1,1,6,0v25.755l12.479-7.341.006.01a2.957,2.957,0,0,1,3.179.081h0l.011.007,0,0,13.289,8.859,24.324-16.84,0,0a3,3,0,1,1,3.412,4.928Z" fill="#fff"/>
+  </g>
+</svg>

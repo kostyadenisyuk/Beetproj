@@ -1,0 +1,105 @@
+@import "../_colors";
+@import "../_mixins";
+@import "../_fonts";
+
+.ourteam{
+    margin-top: 70px;   
+    max-width: 1920px;
+
+    h3{
+        font-family: "HelveticaNeueLTPro-Roman";
+        font-size: 24px;
+        letter-spacing: 0.026em;
+        color: $text-1;
+    }
+    
+    &__title{
+        @include center;
+        flex-direction: column;
+        
+        
+        h2{
+            margin: 0;
+            font-family: "HelveticaNeueLTPro-Lt";
+        }
+        p{
+            font-family: "Merriweather-LightItalic";
+            font-size: 16px;
+            letter-spacing: 0.026em;
+            color:$gray-2;
+            margin: 0;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width :1024px) {
+            flex-direction: column;;
+        }
+
+        i{
+            color:$icons-cl;
+            
+        }
+        i:hover{
+            color:blue;
+            cursor: pointer;
+        }
+    }
+
+    &__second-wrapper{
+        margin-top: 72px;
+        margin-left: 220px;
+        margin-right: 236px;
+        width: 168px;
+        height: 270px;
+        @include no-flex;
+
+        h3{
+            margin-top: 20px;
+            margin-bottom: 1px;
+        }
+
+        p{
+            margin-top: 0;
+            margin-bottom: 20px;
+            color:$gray-5;
+        }
+    }
+
+    &__first-wrapper{
+        margin-top: 136px;
+        @include no-flex;
+
+        h3{
+            margin-top: 20px;
+            margin-bottom: 1px;
+        }
+
+        p{
+            margin-top: 0;
+            width:220px;
+            margin-bottom: 20px;
+            color:$gray-5;
+        }
+    }
+
+    &__third-wrapper{
+        margin-top: 136px;
+        @include no-flex;
+        
+        h3{
+            margin-top: 20px;
+            margin-bottom: 1px;
+        }
+
+        p{
+            margin-top: 0;
+            margin-bottom: 20px;
+            color:$gray-5;
+        }
+    }
+}
