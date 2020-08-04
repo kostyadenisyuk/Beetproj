@@ -1,0 +1,68 @@
+@import "../../../../styles/configs.scss";
+
+.landing-sidebar {
+  width: 320px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: transform $anim-time ease;
+  box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+
+  @media screen and (max-width: $breakpoint-up-sm) {
+    display: block;
+  }
+
+  @media screen and (max-width: 600px) {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: #545454;
+    }
+  }
+
+  &__list-item {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f1f1f1;
+    }
+
+    & > * {
+      &:first-child {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      &:last-child {
+        margin: 0 48px;
+
+        @media screen and (max-width: 600px) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

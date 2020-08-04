@@ -1,0 +1,43 @@
+.gapdog_main {
+  display: flex;
+  justify-content: space-around;
+  min-height: 450px;
+  align-items: center;
+
+  
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+
+    padding: 0 10px;
+  }
+
+  &__img {
+    width: 300px;
+    height: 400px;
+  }
+
+  &__wrapper {
+    text-align: left;
+    justify-content: left;
+    max-width: 440px;
+    margin-top: 90px;
+  }
+
+  &__title {
+    font-family: Georgia;
+    font-size: 35px;
+    line-height: 35px;
+    width: 340px;
+    align-self: center;
+    color: #545454;
+  }
+
+  &__subtitle {
+    font-family: Arial;
+    font-size: 15px;
+    max-width: 440px;
+    height: 305px;
+    line-height: 15px;
+    color: #4c4c4c;
+  }
+}

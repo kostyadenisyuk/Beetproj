@@ -1,0 +1,26 @@
+@import "../../styles/configs.scss";
+
+.tabs {
+  min-height: 450px;
+
+  &__header {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  &__header-link {
+    margin-right: 50px;
+  }
+
+  &__header-scroll-wrapper {
+    min-height: 200px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+}

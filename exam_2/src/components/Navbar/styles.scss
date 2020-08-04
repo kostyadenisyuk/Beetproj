@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  //   position: relative;
+  //   right: 25%;
+  //   overflow-y: hidden;
+
+  &__item {
+    margin-top: 40px;
+    max-width: 111px;
+    height: 13px;
+    color: #cdcdcd;
+    font-family: "Arial MT";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 13px;
+    text-decoration: none;
+    margin-right: 38px;
+
+    &:hover {
+      // border-bottom: 2px solid #f1cdb3;
+      color: #f1cdb3;
+    }
+    // &:active {
+    //   border-bottom: 3px solid #f1cdb3;
+    // }
+  }
+}

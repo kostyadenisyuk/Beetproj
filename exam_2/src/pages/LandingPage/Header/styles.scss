@@ -1,0 +1,28 @@
+@import "../../../styles/configs.scss";
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  //   position: relative;
+  //   left: 25%;
+  //   overflow-y: hidden;
+
+  &__nav-wrapper {
+    display: flex;
+    align-items: center;
+
+    .navbar {
+      @media screen and (max-width: $breakpoint-up-sm) {
+        display: none;
+      }
+    }
+
+    .hamburger-btn {
+      display: none;
+
+      @media screen and (max-width: $breakpoint-up-sm) {
+        display: block;
+      }
+    }
+  }
+}

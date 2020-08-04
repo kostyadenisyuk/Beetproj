@@ -1,0 +1,27 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  
+
+  &__main {
+    max-width: 181px;
+    max-height: 32px;
+    color: #f1cdb3;
+    font-family: Georgia;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 1.13px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__item {
+    width: 180px;
+    height: 13px;
+    color: #ffffff;
+    font-family: "Arial MT";
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    margin-top: 10px;
+  }
+}
