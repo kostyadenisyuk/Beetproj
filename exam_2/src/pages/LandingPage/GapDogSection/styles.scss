@@ -1,14 +1,21 @@
+@import "../../../styles/colors";
+
 .gapdog_main {
   display: flex;
   justify-content: space-around;
   min-height: 450px;
   align-items: center;
 
-  
   @media screen and (max-width: 1024px) {
     flex-direction: column;
 
     padding: 0 10px;
+  }
+  @media screen and (max-width: 414px) {
+    h2 {
+      max-width: 250px;
+      font-size: 25px;
+    }
   }
 
   &__img {
@@ -29,7 +36,7 @@
     line-height: 35px;
     width: 340px;
     align-self: center;
-    color: #545454;
+    color: $grey-1;
   }
 
   &__subtitle {
@@ -38,6 +45,6 @@
     max-width: 440px;
     height: 305px;
     line-height: 15px;
-    color: #4c4c4c;
+    color: $grey-2;
   }
 }

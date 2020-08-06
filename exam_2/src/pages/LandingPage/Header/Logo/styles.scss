@@ -1,12 +1,13 @@
+@import "../../../../styles/colors";
+
 .logo {
   display: flex;
   flex-direction: column;
-  
 
   &__main {
     max-width: 181px;
     max-height: 32px;
-    color: #f1cdb3;
+    color: $orange-1;
     font-family: Georgia;
     font-size: 32px;
     font-weight: 400;
@@ -17,7 +18,7 @@
   &__item {
     width: 180px;
     height: 13px;
-    color: #ffffff;
+    color: $white-1;
     font-family: "Arial MT";
     font-size: 13px;
     font-weight: 400;

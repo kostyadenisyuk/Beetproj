@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"
 
-import { FaRegCreditCard } from "react-icons/fa";
+import { FaRegCreditCard } from "react-icons/fa"
 
-import "./styles.scss";
+import "./styles.scss"
 
 export const TabsContent = (props) => {
-  const { name, content } = props;
+  const { name, content } = props
   return (
     <div className="tabs_content">
       <div className="tabs_content__wrapper tabs_content__wrapper--img">
@@ -20,10 +20,12 @@ export const TabsContent = (props) => {
         <p className="tabs_content__subtitle">
           Name of the bank / Type of bank account
         </p>
-        <p className="tabs_content__card">
-          <FaRegCreditCard className="tabs_content__card tabs_content__card--icon" />
-          8380 2880 8028 8791 7435
-        </p>
+        <div className="tabs_content__wrapper--card">
+          <div className="tabs_content__card">
+            <FaRegCreditCard className="tabs_content__card tabs_content__card--icon" />
+            <p className="tabs_content__numb">8380 2880 8028 8791 7435</p>
+          </div>
+        </div>
         <p className="tabs_content__info">
           Legal information and lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac
@@ -32,5 +34,5 @@ export const TabsContent = (props) => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}

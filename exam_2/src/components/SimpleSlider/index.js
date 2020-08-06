@@ -14,21 +14,6 @@ import dog2 from "../../assets/images/sliderphoto_2.svg";
 // Styles
 
 import "./styles.scss";
-import { SliderList } from "../../constants/SliderList";
-
-// ----------------
-
-const SampleNextArrow = (props) => {
-  const { className, onClick } = props;
-
-  return <div className={className} onClick={onClick}></div>;
-};
-
-const SamplePrevArrow = (props) => {
-  const { className, onClick } = props;
-
-  return <div className={className} onClick={onClick}></div>;
-};
 
 // ----------------
 
@@ -66,25 +51,25 @@ export class SimpleSlider extends React.Component {
     return (
       <Slider className="home-slider" {...settings}>
         <div className="home-slider__slide">
-          <SliderCards list={SliderList} player={dog} name={"Vasya"} />
+          <SliderCards player={dog} name={"Vasya"} />
         </div>
         <div className="home-slider__slide">
-          <SliderCards list={SliderList} player={dog2} name={"Kolya"} />
-        </div>
-
-        <div className="home-slider__slide">
-          <SliderCards list={SliderList} player={dog1} name={"Petya"} />
+          <SliderCards player={dog2} name={"Kolya"} />
         </div>
 
         <div className="home-slider__slide">
-          <SliderCards list={SliderList} player={dog2} name={"Vasya"} />
+          <SliderCards player={dog1} name={"Petya"} />
         </div>
 
         <div className="home-slider__slide">
-          <SliderCards list={SliderList} player={dog} name={"Kolya"} />
+          <SliderCards player={dog2} name={"Vasya"} />
+        </div>
+
+        <div className="home-slider__slide">
+          <SliderCards player={dog} name={"Kolya"} />
         </div>
         <div className="home-slider__slide">
-          <SliderCards list={SliderList} player={dog1} name={"Petya"} />
+          <SliderCards player={dog1} name={"Petya"} />
         </div>
       </Slider>
     );

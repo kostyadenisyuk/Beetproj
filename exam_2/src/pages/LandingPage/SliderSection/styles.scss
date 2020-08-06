@@ -10,9 +10,16 @@
     border: none;
     background-color: #f1cdb3;
     cursor: pointer;
+    font-family: Georgia;
 
     &:hover {
       background-color: #f1cdc1;
+    }
+  }
+
+  h2 {
+    @media screen and (max-width: 414px) {
+      font-size: 25px;
     }
   }
 }

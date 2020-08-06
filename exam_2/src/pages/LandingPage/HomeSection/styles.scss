@@ -25,13 +25,21 @@
     display: flex;
     flex-direction: column;
 
+    @media screen and (max-width: 360px) {
+      left: 5%;
+    }
+
     &__h1 {
       font-family: Georgia;
       font-size: 44px;
-      width: 350px;
+      max-width: 330px;
       text-align: left;
-      color: #ffffff;
+      color: #fff;
       font-weight: 400;
+
+      @media screen and(max-width:767px) {
+        font-size: 20px;
+      }
     }
     &__txt {
       width: 460px;
@@ -40,6 +48,7 @@
       font-weight: 400;
       text-align: left;
       color: #cdcdcd;
+      margin-bottom: 50px;
 
       @media screen and (max-width: 600px) {
         max-width: 300px;
@@ -55,6 +64,7 @@
       padding: 0;
       border: none;
       cursor: pointer;
+      font-family: Georgia;
 
       &:hover {
         background-color: #f1cdc1;
@@ -67,10 +77,10 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    height: 115vh;
+    height: 100vh;
     max-width: 800px;
 
-    @media screen and(max-width:1280px) {
+    @media screen and(max-width:1200px) {
       max-width: 450px;
       height: 550px;
     }

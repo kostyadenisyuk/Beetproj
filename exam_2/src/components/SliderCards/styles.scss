@@ -1,8 +1,10 @@
+@import "../../styles/colors";
+
 .slidercard {
-  background-color: #fafafa;
+  background-color: $white-4;
   width: 270px;
   border-radius: 10px;
-  border: #707070;
+  border: $grey-4;
 
   @media screen and(max-width:1000px) {
     width: 90%;
@@ -18,12 +20,13 @@
     border-radius: 15px;
     outline: none;
     border: none;
-    background-color: #f1cdb3;
+    background-color: $orange-1;
     margin-bottom: 10px;
     cursor: pointer;
+    font-family: Georgia;
 
     &:hover {
-      background-color: #f1cdc1;
+      background-color: $orange-2;
     }
   }
 
