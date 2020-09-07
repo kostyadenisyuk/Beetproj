@@ -1,0 +1,73 @@
+@import "../../../styles/configs.scss";
+@import "../../../styles/colors.scss";
+
+.choose-section {
+  min-height: 740px;
+  background-color: $white-3;
+  padding: 0 20px;
+  position: relative;
+  padding-top: 160px;
+
+  @media screen and (max-width: 812px) {
+    min-height: 1300px;
+  }
+
+  @media screen and (max-width: 768px) {
+    min-height: 1145px;
+  }
+
+  @media screen and (max-width: 575px) {
+    min-height: 220vh;
+  }
+
+  @media screen and (max-width: 376px) {
+    min-height: 250vh;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    width: 100%;
+    text-align: left;
+
+    h2 {
+      margin-bottom: 64px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      max-width: 720px;
+    }
+  }
+  &__subtitle {
+    color: $black-2;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: $gray-1;
+  }
+
+  &__info-wrapper {
+    font-size: 0.8rem;
+    margin-top: 24px;
+    display: flex;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      margin-left: 5px;
+      color: var(--blue);
+      cursor: pointer;
+    }
+  }
+}

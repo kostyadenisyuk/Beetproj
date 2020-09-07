@@ -1,0 +1,77 @@
+@import "../../../../styles/colors.scss";
+@import "../../../../styles/configs.scss";
+
+.home-section {
+  .leftbar {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .rightbar {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .navbar--active {
+    background-color: $white-4;
+    padding: 24px 0;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000000000000;
+  }
+  nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 44px 0;
+    font-size: 1rem;
+    z-index: 100000000000;
+    display: flex;
+    justify-content: space-evenly;
+    height: 44px;
+    padding: 20px 0;
+    width: 100%;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 1024px;
+    }
+
+    @media screen and (max-width: 768px) {
+      justify-content: space-around;
+      max-width: 768px;
+    }
+
+    a {
+      margin-right: 30px;
+      text-decoration: none;
+      color: $black-2;
+      font-size: 1rem;
+
+      @keyframes fadeInUp {
+        from {
+          transform: translate3d(0, 40px, 0);
+        }
+
+        to {
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        color: $gray-2;
+        opacity: 40%;
+      }
+    }
+  }
+  .navbar__wrapper-img {
+    img {
+      height: 18px;
+    }
+  }
+
+  .mth {
+    display: flex;
+  }
+}

@@ -1,0 +1,108 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "../../../styles/colors";
+@import "../../../styles/configs";
+@import "../../../styles/mixins";
+
+.slider {
+  max-height: 600px;
+  max-width: 1200px;
+  padding: 0 3.5rem;
+  padding-bottom: 2.25rem;
+  margin: auto;
+  position: relative;
+  margin-top: 100px;
+
+  &__slide {
+    outline: none;
+    width: 250px;
+  }
+
+  &.slick-current {
+    margin-right: 15px;
+  }
+}
+.slick-arrow {
+  color: $black-1;
+  width: 3rem;
+  height: 3rem;
+  @include center;
+
+  &.slick-prev {
+    left: -40px;
+
+    @media screen and (max-width: 1024px) {
+      left: 8px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      left: 8px;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    .react-icon {
+      font-size: 1.75rem;
+      border-radius: 10px;
+    }
+  }
+
+  &.slick-next {
+    right: 15px;
+
+    &:before {
+      display: none;
+    }
+
+    .react-icon {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  height: 4rem;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    list-style: none;
+    @include center;
+    padding: 0 6px;
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    button {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      margin: 0;
+      transition: transform 0.15s ease;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &.slick-active {
+      button {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      button {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

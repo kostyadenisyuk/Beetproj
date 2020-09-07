@@ -1,0 +1,25 @@
+@import "../../../styles/configs";
+
+.modal-header {
+  min-height: 48px;
+  padding: 24px 48px 0 24px;
+
+  &__close-btn {
+    transition: color $anim-time;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    right: 12px;
+    top: 12px;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}

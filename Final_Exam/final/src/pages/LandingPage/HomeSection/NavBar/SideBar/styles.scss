@@ -1,0 +1,69 @@
+@import "../../../../../styles/configs.scss";
+@import "../../../../../styles/colors.scss";
+@import "../../../../../styles/mixins";
+
+.landing-sidebar {
+  width: 320px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: $white-2;
+  transform: translateX(-100%);
+  box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 0;
+
+  @media screen and (min-width: 100px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 600px) {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__list {
+    @include flex-col;
+    margin-top: 30px;
+
+    a {
+      text-decoration: none;
+      color: $gray-3;
+    }
+  }
+
+  &__list-item {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $gray-3;
+      color: $white-2;
+    }
+    & > * {
+      &:first-child {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      &:last-child {
+        margin: 0 48px;
+
+        @media screen and (max-width: 600px) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

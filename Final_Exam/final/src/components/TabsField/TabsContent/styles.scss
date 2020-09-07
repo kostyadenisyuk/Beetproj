@@ -1,0 +1,107 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/configs.scss";
+@import "../../../styles/mixins";
+
+.tabs_content {
+  margin-top: 50px;
+  position: absolute;
+  max-width: 500px;
+  top: 0;
+  right: 15%;
+  @include center;
+  padding-top: 160px;
+
+  @media screen and (max-width: 1366px) {
+    right: 10%;
+  }
+
+  @media screen and (max-width: 812px) {
+    bottom: 50px;
+    top: auto;
+    left: 100px;
+  }
+
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+    left: 95px;
+    width: 180px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
+  }
+
+  &__info {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $black-2;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $black-2;
+    padding: 9px 18px;
+    border: 1px solid rgba(38, 39, 45, 0.2);
+    display: inline-block;
+    margin-bottom: 40px;
+    border-radius: 30px;
+  }
+
+  &__wrapper {
+    background-color: $white-4;
+    height: 520px;
+    width: 250px;
+    padding: 20px 50px 20px 50px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &__wrapper-gr {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+
+    background-color: $white-5;
+    height: 480px;
+    width: 250px;
+    padding: 20px 50px 20px 50px;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+  }
+  @keyframes fadeInUp {
+    from {
+      transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeInUp {
+    from {
+      transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  .animatedFadeInUp {
+    opacity: 0;
+  }
+
+  .fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+  }
+}

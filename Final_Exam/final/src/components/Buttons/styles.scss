@@ -1,0 +1,59 @@
+:root {
+  --blue: #267df4;
+  --white: #ffffff;
+  --green: #6fc754;
+  --outline: #ffffff;
+  --black: #26272d;
+
+  .btn {
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3 ease;
+    height: 42px; 
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .btn--blue {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+  }
+
+  .btn--white {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+  }
+
+  .btn--green {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+  }
+
+  .btn--outline {
+    background-color: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+  }
+
+  // Sizes //
+
+  .btn--sm {
+    width: 115px;
+  }
+
+  .btn--md {
+    width: 145px;
+  }
+
+  .btn--lg {
+    width: 200px;
+  }
+}

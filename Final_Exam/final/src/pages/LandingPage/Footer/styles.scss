@@ -1,0 +1,146 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/configs.scss";
+
+.footer {
+  padding: 0 20px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+
+    p {
+      margin: 0px 5px 0px 0px;
+    }
+
+    a {
+      color: var(--blue);
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  &__wrapper-bs {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+
+    p {
+      margin: 0px 5px 0px 0px;
+    }
+
+    a {
+      color: var(--blue);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+      :first-child {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    margin-top: 32px;
+    :only-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__logo-wrapper-lt {
+    display: flex;
+  }
+
+  &__logo-wrapper-rt {
+    display: flex;
+    :only-child {
+      margin-right: 20px;
+    }
+    p {
+      font-size: 0.6rem;
+      font-weight: 700;
+      line-height: 22px;
+      color: $black-2;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 12px;
+    }
+  }
+  &__left-column {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      max-width: 250px;
+      width: 100%;
+
+      @media screen and (max-width: 575px) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &__wrapper-info {
+    display: flex;
+    :last-child {
+      margin-right: 0;
+    }
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+    }
+  }
+  &__info-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    :first-child {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: $black-2;
+      font-size: 0.75rem;
+    }
+
+    @media screen and (max-width: 415px) {
+      margin-right: 0;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+
+    a {
+      color: $gray-1;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 40%;
+      }
+    }
+  }
+
+  &__base {
+    .line {
+      height: 1px;
+      background-color: rgba(38, 39, 45, 0.2);
+      max-width: 1170px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  svg {
+    color: rgba(19, 19, 21, 0.3);
+
+    :hover {
+      color: $black-2;
+      cursor: pointer;
+    }
+  }
+}

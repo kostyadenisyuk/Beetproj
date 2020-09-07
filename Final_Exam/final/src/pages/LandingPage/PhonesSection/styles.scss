@@ -1,0 +1,32 @@
+@import "../../../styles/configs";
+@import "../../../styles/colors";
+@import "../../../styles/mixins";
+
+.phones-section {
+  min-height: 1200px;
+  background-color: $white-3;
+
+  &__wrapper {
+    padding-top: 140px;
+    @include flex-col;
+
+    p {
+      margin-top: 40px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+    }
+
+    .line {
+      width: 75px;
+      height: 3px;
+      background-color: $blue-1;
+    }
+  }
+
+  &__img-wrapper {
+    margin-top: 50px;
+    @include center;
+    overflow: hidden;
+  }
+}
