@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
 //Components
 
-import { TabsField } from "../../../components/TabsField";
+import { TabsField } from '../../../components/TabsField';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ------
 
 export const ChooseSection = () => {
   return (
-    <div className="choose-section">
+    <div className="choose-section" id="pricing">
       <div className="choose-section__wrapper">
         <h2>Choose your perfect plan</h2>
         <p className="choose-section__subtitle">YOU ARE</p>
@@ -29,10 +29,6 @@ export const ChooseSection = () => {
           <p>Have a bigger team?</p>
           <a> Let‘s talk</a>
         </div>
-      </div>
-
-      <div>
-        <></>
       </div>
     </div>
   );

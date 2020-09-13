@@ -1,18 +1,20 @@
-@import "../../../styles/configs.scss";
-@import "../../../styles/colors.scss";
-@import "../../../styles/mixins";
+@import '../../../styles/configs';
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
 
 .hack-section {
   min-height: 900px;
-  // width: 100%;
   position: relative;
-  z-index: -1;
   background-color: $white-4;
-
   padding: 0 10px;
   padding-bottom: 120px;
+  z-index: 1;
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: $breakpoint-up-sm) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (max-width: $breakpoint-up-xs) {
     min-height: 300px;
   }
 
@@ -23,19 +25,26 @@
     text-align: left;
     margin-left: auto;
     margin-right: 100px;
+    align-items: flex-start;
+    @include mar-bot;
   }
 
   &__title {
     color: $black-2;
+    margin-bottom: 30px;
   }
 
   .hack-section__phone-wrapper {
     position: absolute;
-
+    z-index: -1;
     right: 50%;
     bottom: 100px;
 
-    @media screen and (max-width: 575px) {
+    img {
+      max-width: none;
+    }
+
+    @media screen and (max-width: $breakpoint-up-xs) {
       display: none;
     }
   }
@@ -45,7 +54,7 @@
 
     :first-child {
       margin-right: 40px;
-      @media screen and (max-width: 414px) {
+      @media screen and (max-width: $breakpoint-down-xs) {
         width: 155px;
       }
     }

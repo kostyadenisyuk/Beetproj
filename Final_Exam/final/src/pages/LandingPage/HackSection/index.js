@@ -1,27 +1,27 @@
-import React from "react";
+import React from 'react';
 
 //Modules
 
-import phone from "../../../assets/images/hack-iphone.png";
+import phone from '../../../assets/images/hack-iphone.png';
 
 //Components
 
-import { Buttons } from "../../../components/Buttons";
+import { Buttons } from '../../../components/Buttons';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ----
 
 export const HackSection = () => {
   return (
-    <div className="hack-section">
-      <div className="hack-section__wrapper">
-        <div className="hack-section__phone-wrapper">
-          <img src={phone} />
-        </div>
+    <div className="hack-section" id="help">
+      <div className="hack-section__phone-wrapper">
+        <img src={phone} />
+      </div>
 
+      <div className="hack-section__wrapper">
         <h2 className="hack-section__title">Your day is protected</h2>
         <p>There have not been any since we have lived here, said my mother </p>
         <p>

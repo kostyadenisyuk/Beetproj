@@ -1,5 +1,6 @@
 .input {
   position: relative;
+
   &__wrapper {
     min-width: 400px;
     width: 100%;
@@ -12,6 +13,7 @@
       min-width: 300px;
     }
   }
+
   &__field {
     max-width: 502px;
     width: 100%;
@@ -22,10 +24,11 @@
     padding-left: 20px;
     outline: none;
   }
+
   &__btn {
     position: absolute;
-    right: 4px;
-    top: 6px;
+    right: 5px;
+    top: 4px;
     max-width: 164px;
     width: 100%;
     height: 42px;

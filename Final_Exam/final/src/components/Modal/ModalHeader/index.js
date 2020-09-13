@@ -1,28 +1,22 @@
-import React from "react";
+import React from 'react';
 
 // Modules
 
-// import { IoMdCloseCircle } from "react-icons/io";
-import types from "prop-types";
-
-// Components
-
-// import { ReactIcon } from "../../ReactIcon";
+import types from 'prop-types';
 
 // Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ----------------
 
-export const ModalHeader = (props) => {
+export const ModalHeader = props => {
   const { onClose, title } = props;
 
   return onClose || title ? (
     <div className="modal-header">
       {title && <p className="modal-header__title">{title}</p>}
-
-      {onClose && <p>LOH</p>}
+      {onClose && <p>Wait</p>}
     </div>
   ) : null;
 };

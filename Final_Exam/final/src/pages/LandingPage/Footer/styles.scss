@@ -1,12 +1,14 @@
-@import "../../../styles/colors.scss";
-@import "../../../styles/configs.scss";
+@import '../../../styles/colors';
+@import '../../../styles/configs';
 
 .footer {
   padding: 0 20px;
+
   &__wrapper {
     display: flex;
     justify-content: space-around;
     text-align: left;
+    margin-bottom: 20px;
 
     p {
       margin: 0px 5px 0px 0px;
@@ -20,6 +22,7 @@
   }
 
   &__wrapper-bs {
+    padding-top: 20px;
     display: flex;
     justify-content: space-around;
     text-align: left;
@@ -34,7 +37,7 @@
       text-decoration: none;
     }
 
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: $breakpoint-up-xs) {
       flex-direction: column;
       :first-child {
         margin-bottom: 5px;
@@ -45,8 +48,19 @@
   &__logo-wrapper {
     display: flex;
     margin-top: 32px;
+    cursor: pointer;
+
+    a {
+      color: rgba(19, 19, 21, 0.3);
+
+      &:hover {
+        color: $black-2;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
     :only-child {
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 
@@ -59,6 +73,7 @@
     :only-child {
       margin-right: 20px;
     }
+
     p {
       font-size: 0.6rem;
       font-weight: 700;
@@ -69,6 +84,7 @@
       margin-top: 12px;
     }
   }
+
   &__left-column {
     display: flex;
     flex-direction: column;
@@ -77,7 +93,7 @@
       max-width: 250px;
       width: 100%;
 
-      @media screen and (max-width: 575px) {
+      @media screen and (max-width: $breakpoint-up-xs) {
         margin-bottom: 35px;
       }
     }
@@ -88,14 +104,21 @@
     :last-child {
       margin-right: 0;
     }
-    @media screen and (max-width: 575px) {
+
+    @media screen and (max-width: $breakpoint-up-xs) {
       flex-direction: column;
     }
   }
+
   &__info-column {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
+
+    p {
+      margin-bottom: 10px;
+    }
+
     :first-child {
       font-weight: 700;
       text-transform: uppercase;
@@ -104,7 +127,11 @@
       font-size: 0.75rem;
     }
 
-    @media screen and (max-width: 415px) {
+    p {
+      text-transform: uppercase;
+    }
+
+    @media screen and (max-width: $breakpoint-down-xs) {
       margin-right: 0;
     }
 
@@ -135,12 +162,13 @@
     }
   }
 
-  svg {
-    color: rgba(19, 19, 21, 0.3);
+  .left-column__wrapper {
+    margin-top: 20px;
+    cursor: pointer;
 
     :hover {
-      color: $black-2;
-      cursor: pointer;
+      transform: translateY(-3px);
+      transition: all 0.3s ease-in-out;
     }
   }
 }

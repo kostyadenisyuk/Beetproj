@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
 //Modules
 
-import types from "prop-types";
+import types from 'prop-types';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ------
 
-export const SliderCard = (props) => {
+export const SliderCard = props => {
   const { slider_photo } = props;
   return (
     <div className="slider-card">
@@ -22,7 +22,7 @@ export const SliderCard = (props) => {
         key and hurried off to the garden door.”
       </p>
 
-      <p>CAMERON DOWMAN</p>
+      <p className="slider-card__cards-name">Cameron dowman</p>
     </div>
   );
 };

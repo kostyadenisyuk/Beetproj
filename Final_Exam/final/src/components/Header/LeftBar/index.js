@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export const LeftBar = (props) => {
+export const LeftBar = props => {
   const { list } = props;
   return (
     <div className="leftbar">

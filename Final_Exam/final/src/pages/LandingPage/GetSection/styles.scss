@@ -1,13 +1,29 @@
-@import "../../../styles/colors.scss";
-@import "../../../styles/configs.scss";
-@import "../../../styles/mixins";
+@import '../../../styles/colors';
+@import '../../../styles/configs';
+@import '../../../styles/mixins';
 
 .get-section {
   @include flex-col;
   min-height: 550px;
   background-color: $white-3;
+  transition: all 0.3s ease-in-out;
+  @include mar-bot;
+  text-align: center;
+
+  p {
+    text-transform: uppercase;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
 
   &__wrapper-img {
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-3px);
+    }
+
     img {
       border-radius: 30px;
       width: 210px;

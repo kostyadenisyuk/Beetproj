@@ -1,18 +1,17 @@
-@import "../../styles/configs.scss";
-@import "../../styles/colors.scss";
-// @import '../../styles/mixins.scss';
+@import '../../styles/configs';
+@import '../../styles/colors';
+@import '../../styles/mixins';
 
 .button-up {
-  // @include center;
+  @include center;
   width: 50px;
   height: 50px;
   border-radius: $border-radius;
   background-color: #000;
-  transition: background-color $anim-time-fast ease,
-    opacity $anim-time-fast ease, color $anim-time-fast ease;
   pointer-events: none;
   opacity: 0;
   color: #fff;
+  z-index: 2;
 
   &:hover {
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.36);
@@ -24,5 +23,9 @@
     opacity: 1;
     pointer-events: auto;
     cursor: pointer;
+  }
+
+  div {
+    display: flex;
   }
 }

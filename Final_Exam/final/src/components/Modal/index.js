@@ -1,51 +1,66 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { useEffect } from 'react';
 
-import classNames from "classnames";
+// Modules
 
-import "./styles.scss";
+import { createPortal } from 'react-dom';
+import classNames from 'classnames';
 
-export default class Modal extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isModalOpen: false,
-    };
-    this.open = this.open.bind(this);
-    this.close = this.close.bind(this);
+// Components
 
-    const modalClass = classNames({
-      modal: true,
-      "modal--open": props.open,
-    });
+import { ModalHeader } from './ModalHeader';
+
+// Styles
+
+import './styles.scss';
+
+// ----------------
+
+export const Modal = ({
+  bodyHeight,
+  noPadding,
+  closeIcon = true,
+  children,
+  onClose,
+  width = 'sm',
+  title,
+  open,
+}) => {
+  if (open) {
+    document.body.setAttribute('class', 'overflow-hidden');
+  } else {
+    document.body.removeAttribute('class');
   }
 
-  open() {
-    document.body.setAttribute("class", "overflow-hidden");
-  }
+  const modalClass = classNames({
+    modal: true,
+    'modal--open': open,
+  });
 
-  close() {
-    document.body.setAttribute("class", "overflow-no");
-  }
+  const modalContent = classNames({
+    modal__content: true,
+    [`modal__content--width-${width}`]: width,
+    [`modal__content--body-height-${bodyHeight}`]: bodyHeight,
+  });
 
-  render(open) {
-    const modalClass = classNames({
-      modal: true,
-      "modal--open": open,
-    });
+  const modalBodyClass = classNames({
+    modal__body: true,
+    'modal__content--no-padding': noPadding,
+  });
 
-    return ReactDOM.createPortal(
-      <div className={`${modalClass}`}>
-        <div className="modal__content">
-          <button className="modal__close-btn" onClick={this.props.onClose}>
-            Close
-          </button>
+  return createPortal(
+    open ? (
+      <div className={modalClass}>
+        <div className={modalContent}>
+          {(title || (closeIcon && onClose)) && (
+            <ModalHeader onClose={onClose} title={title} />
+          )}
 
-          {this.props.children}
+          <div className={modalBodyClass}>{children}</div>
         </div>
-        <div className="modal__backdrop" onClick={this.props.onClose} />
-      </div>,
-      document.getElementById("portal")
-    );
-  }
-}
+
+        <div className="modal__backdrop" onClick={onClose} />
+      </div>
+    ) : null,
+    document.body
+  );
+};

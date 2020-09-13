@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React from 'react';
 
 //Modules
 
-import classNames from "classnames";
-import types from "prop-types";
+import classNames from 'classnames';
+import types from 'prop-types';
 
 // Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ----------------
 
-export const SideBar = (props) => {
+export const SideBar = props => {
   const { isOpen, list } = props;
 
   const sidebarClass = classNames({
-    "landing-sidebar": true,
-    "landing-sidebar--open": isOpen,
+    'landing-sidebar': true,
+    'landing-sidebar--open': isOpen,
   });
 
   return (

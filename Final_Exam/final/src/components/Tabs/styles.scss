@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";
+@import '../../styles/colors';
 
 .tabs {
   &__header-scroll-wrapper {
@@ -6,26 +6,28 @@
     cursor: pointer;
     font-size: 11px;
     font-weight: 700;
-
+    align-items: center;
+    text-align: center;
     letter-spacing: 0.1em;
     color: $black-2;
-    padding: 9px 18px;
+    padding: 4px 4px;
     border: 1px solid rgba(38, 39, 45, 0.2);
 
     margin-bottom: 40px;
     border-radius: 30px;
   }
+
   &__header {
     display: flex;
     :first-child {
       margin-right: 5px;
     }
-
-    // &__content{
-
-    // }
   }
+
   .tabs__header-link {
+    align-items: center;
+    justify-content: center;
+    display: flex;
     background-color: transparent;
     height: 40px;
     width: 100px;
@@ -37,10 +39,11 @@
     border: 1px solid rgba(38, 39, 45, 0.2);
     border-radius: 30px;
     text-align: center;
-    transition: color 0.9s cubic-bezier(0.545, 0, 0.05, 1);
+    transition: all 0.4s ease-in-out;
+
     &--active {
       background-color: #ffffff;
-      transition: color 5s cubic-bezier(0.545, 0, 0.05, 1);
+      transition: all 0.4s ease-in-out;
     }
   }
 }

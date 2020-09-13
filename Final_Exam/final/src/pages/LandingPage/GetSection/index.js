@@ -1,26 +1,27 @@
-import React from "react";
+import React from 'react';
 
 //Modules
 
-import apple from "../../../assets/images/apple.png";
+import apple from '../../../assets/images/apple.png';
 
 //Components
 
-import { Input } from "../../../components/Input";
+import { Input } from '../../../components/Input';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // -----
 
 export const GetSection = () => {
   return (
-    <div className="get-section">
-      <p>NEWPROVIDENCE</p>
+    <div className="get-section" id="get%20app">
+      <p>Newprovidence</p>
       <h2>Get it to your smartphone </h2>
-      <Input value={"Send invite"} />
-      <p>OR DOWNLOAD FROM</p>
+      <Input value={'Send invite'} />
+      <p>Or download from</p>
+
       <a className="get-section__wrapper-img">
         <img src={apple} />
       </a>

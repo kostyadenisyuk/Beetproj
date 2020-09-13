@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react';
 
 // Modules
 
-import classnames from "classnames";
-import types from "prop-types";
+import classnames from 'classnames';
+import types from 'prop-types';
 
 // Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ----------------
 
-export const ReactIcon = (props) => {
+export const ReactIcon = props => {
   const { className, color, size, onClick, id } = props;
 
   const reactIconClass = classnames(
     {
-      "react-icon": true,
+      'react-icon': true,
       [`react-icon--color-${color}`]: color,
       [`react-icon--size-${size}`]: size,
     },
@@ -35,7 +35,7 @@ export const ReactIcon = (props) => {
 ReactIcon.propTypes = {
   className: types.string,
   onClick: types.func,
-  color: types.oneOf(["yellow"]),
+  color: types.oneOf(['yellow']),
   size: types.string,
   id: types.string,
 };

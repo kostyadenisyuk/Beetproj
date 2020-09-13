@@ -1,5 +1,5 @@
-@import "../../../../../styles/colors.scss";
-@import "../../../../../styles/configs.scss";
+@import '../../../styles/colors';
+@import '../../../styles/configs';
 
 .hamburger-btn {
   position: relative;
@@ -12,16 +12,16 @@
   display: block;
   padding: 0;
   z-index: 1;
-  top: -7px;
+  top: 6px;
   margin-right: 5px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-up-sm) {
     right: 40px;
     width: 24px;
     top: -12px;
   }
 
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: $breakpoint-up-xxs) {
     right: 30px;
   }
 
@@ -33,9 +33,9 @@
     background-color: $black-2;
     opacity: 1;
     transform: rotate(0deg);
-    transition: 0.2 all ease;
+    transition: 0.4s all ease;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $breakpoint-up-sm) {
       height: 3px;
     }
 
@@ -47,7 +47,7 @@
     &:nth-of-type(2) {
       top: 5px;
       right: 0;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $breakpoint-up-sm) {
         top: 8px;
       }
     }
@@ -56,7 +56,7 @@
       top: 10px;
       left: 0;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $breakpoint-up-sm) {
         top: 16px;
       }
     }

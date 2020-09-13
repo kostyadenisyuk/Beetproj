@@ -1,32 +1,25 @@
-import React from "react";
+import React from 'react';
 
 //Modules
-import logo from "../../../assets/images/logo.png";
-import apple from "../../../assets/images/apple.png";
 
-import {
-  FaTwitter,
-  FaGoogle,
-  FaFacebook,
-  FaTumblr,
-  FaPinterest,
-  FaLinkedin,
-} from "react-icons/fa";
-
-import logoun from "../../../assets/images/footer-logo.png";
+import logo from '../../../assets/images/logo.png';
+import apple from '../../../assets/images/apple.png';
+import logoun from '../../../assets/images/footer-logo.png';
 
 //Components
 
-import { ReactIcon } from "../../../components/ReactIcon";
+import { ReactIcon } from '../../../components/ReactIcon';
 
 //Styles
-import "./styles.scss";
+
+import './styles.scss';
 
 // -----
 
-export const Footer = () => {
+export const Footer = props => {
+  const { list } = props;
   return (
-    <footer className="footer">
+    <footer className="footer" id="contacts">
       <div className="footer__wrapper">
         <div className="footer__left-column">
           <div>
@@ -38,39 +31,23 @@ export const Footer = () => {
             made, was unpropitious.
           </p>
 
-          <div>
+          <div className="left-column__wrapper">
             <img src={apple} />
           </div>
           <div className="footer__logo-wrapper">
-            <ReactIcon size="xl">
-              <FaTwitter />
-            </ReactIcon>
-
-            <ReactIcon size="xl">
-              <FaFacebook />
-            </ReactIcon>
-
-            <ReactIcon size="xl">
-              <FaGoogle />
-            </ReactIcon>
-
-            <ReactIcon size="xl">
-              <FaTumblr />
-            </ReactIcon>
-
-            <ReactIcon size="xl">
-              <FaPinterest />
-            </ReactIcon>
-
-            <ReactIcon size="xl">
-              <FaLinkedin />
-            </ReactIcon>
+            {list.map((item, index) => {
+              return (
+                <ReactIcon key={index} size="xl">
+                  <a href={item.href}>{<item.icon />}</a>
+                </ReactIcon>
+              );
+            })}
           </div>
         </div>
 
         <div className="footer__wrapper-info">
           <div className="footer__info-column">
-            <p>LEARN MORE</p>
+            <p>Learn more</p>
             <a>How it works?</a>
             <a>Meeting tools</a>
             <a>Live striming</a>
@@ -78,7 +55,7 @@ export const Footer = () => {
           </div>
 
           <div className="footer__info-column">
-            <p>ABOUT US</p>
+            <p>About us</p>
             <a>About us</a>
             <a>Features</a>
             <a>Privacy police</a>
@@ -86,7 +63,7 @@ export const Footer = () => {
           </div>
 
           <div className="footer__info-column">
-            <p>SUPPORT</p>
+            <p>Support</p>
             <a>F.A.Q.</a>
             <a>Contact us</a>
             <a>Live chat</a>
@@ -105,7 +82,7 @@ export const Footer = () => {
           </div>
 
           <div className="footer__logo-wrapper-rt">
-            <p>MADE WITH LOVE BY</p>
+            <p>Made with love by</p>
             <img src={logoun} />
           </div>
         </div>

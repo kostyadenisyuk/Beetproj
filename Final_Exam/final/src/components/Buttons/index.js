@@ -1,18 +1,20 @@
-import React from "react";
+import React from 'react';
 
 //Modules
 
-import types from "prop-types";
+import types from 'prop-types';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
-const styles = ["btn--blue", "btn--white", "btn--outline", "btn--green"];
+// -----
 
-const sizes = ["btn--md", "btn--sm", "btn--lg"];
+const styles = ['btn--blue', 'btn--white', 'btn--outline', 'btn--green'];
 
-export const Buttons = (props) => {
+const sizes = ['btn--md', 'btn--sm', 'btn--lg'];
+
+export const Buttons = props => {
   const { style, size, name } = props;
 
   const checkButtonStyle = styles.includes(style) ? style : styles[0];

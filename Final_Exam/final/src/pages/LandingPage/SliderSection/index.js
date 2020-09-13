@@ -1,23 +1,31 @@
-import React from "react";
+import React from 'react';
 
 //Modules
 
-import Slider from "react-slick";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
-import slider_photo_001 from "../../../assets/images/slider_photo_001.jpg";
-import slider_photo_002 from "../../../assets/images/slider_photo_002.jpg";
-import slider_photo_003 from "../../../assets/images/slider_photo_003.jpg";
+import Slider from 'react-slick';
+import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
+import slider_photo_001 from '../../../assets/images/slider_photo_001.jpg';
+import slider_photo_002 from '../../../assets/images/slider_photo_002.jpg';
+import slider_photo_003 from '../../../assets/images/slider_photo_003.jpg';
+
 //Components
 
-import { SliderCard } from "./SliderCard";
+import { SliderCard } from './SliderCard';
 
 //Styles
-import "./styles.scss";
+
+import './styles.scss';
 
 // ------
 
 export class SliderSection extends React.Component {
   render() {
+    const SlickButtonFix = ({
+      currentSlide,
+      slideCount,
+      children,
+      ...props
+    }) => <span {...props}>{children}</span>;
     const settings = {
       infinity: true,
       speed: 500,
@@ -26,8 +34,16 @@ export class SliderSection extends React.Component {
       autoplay: true,
       autoplaySpeed: 3000,
       arrows: true,
-      nextArrow: <BsArrowRight />,
-      prevArrow: <BsArrowLeft />,
+      nextArrow: (
+        <SlickButtonFix>
+          <BsArrowRight />
+        </SlickButtonFix>
+      ),
+      prevArrow: (
+        <SlickButtonFix>
+          <BsArrowLeft />
+        </SlickButtonFix>
+      ),
 
       responsive: [
         {

@@ -1,24 +1,24 @@
-import React from "react";
+import React from 'react';
 
 // Modules
 
-import classNames from "classnames";
-import types from "prop-types";
+import classNames from 'classnames';
+import types from 'prop-types';
 
 // Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ----------------
 
-export const HamburgerButton = (props) => {
+export const HamburgerButton = props => {
   const { handleClick, isOpen, mirror } = props;
 
   const modifyButton = classNames({
-    "hamburger-btn": true,
-    "hamburger-btn--mirror-open": mirror && isOpen,
-    "hamburger-btn--mirror": mirror,
-    "hamburger-btn--open": isOpen,
+    'hamburger-btn': true,
+    'hamburger-btn--mirror-open': mirror && isOpen,
+    'hamburger-btn--mirror': mirror,
+    'hamburger-btn--open': isOpen,
   });
 
   return (

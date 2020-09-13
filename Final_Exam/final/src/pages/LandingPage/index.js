@@ -1,39 +1,42 @@
-import React from "react";
+import React from 'react';
 
 //Components
 
-import HomeSection from "./HomeSection";
-import { InfoSection } from "./InfoSection";
-import { HackSection } from "./HackSection";
-import { PartnersSection } from "./PartnersSection";
-import { PhonesSection } from "./PhonesSection";
-import { GetSection } from "./GetSection";
-import { SliderSection } from "./SliderSection";
-import { SubscribeSection } from "./SubscribeSection";
-import { Footer } from "./Footer";
-import { ChooseSection } from "./ChooseSection";
-import { ButtonUp } from "../../components/ButtonUp";
+import HomeSection from './HomeSection';
+import { InfoSection } from './InfoSection';
+import { HackSection } from './HackSection';
+import { PartnersSection } from './PartnersSection';
+import { PhonesSection } from './PhonesSection';
+import { GetSection } from './GetSection';
+import { SliderSection } from './SliderSection';
+import { SubscribeSection } from './SubscribeSection';
+import { Footer } from './Footer';
+import { ChooseSection } from './ChooseSection';
+import { ButtonUp } from '../../components/ButtonUp';
+import { Header } from '../../components/Header';
+import { PhonesImages } from '../../constants/images';
+import { IconsList } from '../../constants/icons';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ----
 
 export const LandingPage = () => {
   return (
     <div className="landing">
+      <Header style={`$display:flex;`} />
       <HomeSection />
       <InfoSection />
       <HackSection />
       <PartnersSection />
-      <PhonesSection />
+      <PhonesSection list={PhonesImages} />
       <GetSection />
       <SliderSection />
       <ChooseSection />
       <SubscribeSection />
-      <Footer />
-
+      <Footer list={IconsList} />
       <ButtonUp className="landing__button-up" />
     </div>
   );

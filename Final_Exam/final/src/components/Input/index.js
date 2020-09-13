@@ -1,18 +1,20 @@
-import React from "react";
+import React from 'react';
 
 //Modules
 
-import types from "prop-types";
+import types from 'prop-types';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
-export const Input = (props) => {
+// -----
+
+export const Input = props => {
   const { value } = props;
   return (
     <div className="input">
-      <label for="fname"></label>
+      <label htmlFor="fname"></label>
       <div className="input__wrapper">
         <input
           type="email"
@@ -20,6 +22,7 @@ export const Input = (props) => {
           name="fname"
           className="input__field"
           placeholder="Your e-mail"
+          maxLength="35"
         />
         <input type="submit" value={value} className="input__btn" />
       </div>

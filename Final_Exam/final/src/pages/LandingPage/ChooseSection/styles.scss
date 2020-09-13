@@ -1,5 +1,6 @@
-@import "../../../styles/configs.scss";
-@import "../../../styles/colors.scss";
+@import '../../../styles/configs';
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
 
 .choose-section {
   min-height: 740px;
@@ -7,28 +8,26 @@
   padding: 0 20px;
   position: relative;
   padding-top: 160px;
+  text-align: left;
 
-  @media screen and (max-width: 812px) {
-    min-height: 1300px;
+  @media screen and (max-width: $breakpoint-up-md) {
+    min-height: 1100px;
+    padding-top: 60px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-up-sm) {
     min-height: 1145px;
   }
 
-  @media screen and (max-width: 575px) {
-    min-height: 220vh;
-  }
-
-  @media screen and (max-width: 376px) {
-    min-height: 250vh;
+  @media screen and (max-width: $breakpoint-up-xs) {
+    min-height: 1450px;
   }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 300px;
+    max-width: 615px;
     width: 100%;
     text-align: left;
 
@@ -36,17 +35,20 @@
       margin-bottom: 64px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $breakpoint-up-md) {
       width: 100%;
       max-width: 720px;
     }
   }
+
   &__subtitle {
     color: $black-2;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     font-weight: 700;
     text-transform: uppercase;
+    margin-left: 78px;
+    margin-bottom: 5px;
   }
 
   &__info {

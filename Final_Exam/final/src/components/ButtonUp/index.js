@@ -1,40 +1,40 @@
-import React from "react";
+import React from 'react';
 
 // Modules
 
-import { BsChevronUp } from "react-icons/bs";
-import classNames from "classnames";
-import types from "prop-types";
+import { BsChevronUp } from 'react-icons/bs';
+import classNames from 'classnames';
+import types from 'prop-types';
 
 // Components
 
-import { ReactIcon } from "../ReactIcon";
+import { ReactIcon } from '../ReactIcon';
 
 // Hooks
 
-import { useCurrentPosition } from "../../hooks/useCurrentPosition";
+import { useCurrentPosition } from '../../hooks/useCurrentPosition';
 
 // Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ----------------
 
-export const ButtonUp = (props) => {
+export const ButtonUp = props => {
   const { visiblePosition, className } = props;
 
   const currentPosition = useCurrentPosition();
 
-  const scrollTo = (top) =>
+  const scrollTo = top =>
     window.scrollTo({
-      behavior: "smooth",
+      behavior: 'smooth',
       top,
     });
 
   const buttonUpClass = classNames(
-    "button-up",
+    'button-up',
     {
-      "button-up--visible": currentPosition >= visiblePosition,
+      'button-up--visible': currentPosition >= visiblePosition,
     },
     className
   );
@@ -59,5 +59,5 @@ ButtonUp.propTypes = {
 
 ButtonUp.defaultProps = {
   visiblePosition: 500,
-  className: "",
+  className: '',
 };

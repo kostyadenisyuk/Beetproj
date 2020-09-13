@@ -1,7 +1,20 @@
-@import "../../../styles/mixins";
+@import '../../../styles/mixins';
 
 .subscribe-section {
-  @include flex-col;
+  padding: 120px 20px;
+  height: 100%;
+  padding-top: 100px;
+  display: grid;
+  grid-column: 1;
   min-height: 350px;
-  padding: 0 20px;
+  @include mar-bot;
+  text-align: center;
+
+  * {
+    justify-self: center;
+  }
+
+  input {
+    margin-bottom: 0;
+  }
 }

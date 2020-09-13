@@ -1,21 +1,19 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 //Modules
 
-import types from "prop-types";
-import iphone_home from "../../../assets/images/header_iphone.png";
-import { BsPlayFill } from "react-icons/bs";
+import types from 'prop-types';
+import iphone_home from '../../../assets/images/header_iphone.png';
+import { BsPlayFill } from 'react-icons/bs';
 
 //Components
 
-import { ReactIcon } from "../../../components/ReactIcon";
-import Modal from "../../../components/Modal/";
-import { NavBar } from "./NavBar";
-import { EditModal } from "../../LandingPage/TodoListPage/components/EditModal";
+import { ReactIcon } from '../../../components/ReactIcon';
+import { EditModal } from '../../../components/EditModal';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // -----
 
@@ -29,12 +27,12 @@ export default class HomeSection extends Component {
   }
 
   toggleModal = () => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       isEditModalOpen: !prevState.isEditModalOpen,
     }));
   };
 
-  onShowEditModal = (todo) => {
+  onShowEditModal = todo => {
     this.setState({
       modalData: todo,
     });
@@ -47,7 +45,6 @@ export default class HomeSection extends Component {
 
     return (
       <div className="home-section">
-        <NavBar style={`$display:flex;`} />
         <div className="home-section__title animatedFadeInUp fadeInUp">
           <h1>What happens tomorrow?</h1>
           <p>
@@ -69,13 +66,6 @@ export default class HomeSection extends Component {
             Watch video
           </a>
         </div>
-        {this.state.isModalOpen && (
-          <div>
-            <Modal onClose={this.toggleModal}>
-              <h1>Modal!</h1>
-            </Modal>
-          </div>
-        )}
         <div className="home-section__wrapper">
           <img src={iphone_home} alt="" />
         </div>

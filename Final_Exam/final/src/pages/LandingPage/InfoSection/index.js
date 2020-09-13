@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
 //Modules
 
-import { VscLock } from "react-icons/vsc";
-import { BsAlarm } from "react-icons/bs";
+import { VscLock } from 'react-icons/vsc';
+import { BsAlarm } from 'react-icons/bs';
 
 //Components
 
-import { ReactIcon } from "../../../components/ReactIcon";
+import { ReactIcon } from '../../../components/ReactIcon';
 
 //Styles
 
-import "./styles.scss";
+import './styles.scss';
 
 // ----
 
@@ -19,10 +19,10 @@ export const InfoSection = () => {
   return (
     <div className="info-section">
       <div className="info-section__wrapper">
-        <ReactIcon size="xxxl">
+        <ReactIcon size="xxxxl">
           <VscLock />
         </ReactIcon>
-        <h4 className="info_section__title">Real-time all the time</h4>
+        <h4 className="info-section__title">Real-time all the time</h4>
 
         <p>
           Thus much I thought proper to tell you in relation to yourself, and to
@@ -36,7 +36,7 @@ export const InfoSection = () => {
       </div>
 
       <div className="info-section__wrapper">
-        <ReactIcon size="xxxl">
+        <ReactIcon size="xxxxl">
           <BsAlarm />
         </ReactIcon>
         <h4 className="info-section__title">Adopt without any obstacles</h4>

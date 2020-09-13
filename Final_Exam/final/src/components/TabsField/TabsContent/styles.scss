@@ -1,6 +1,6 @@
-@import "../../../styles/colors.scss";
-@import "../../../styles/configs.scss";
-@import "../../../styles/mixins";
+@import '../../../styles/colors';
+@import '../../../styles/configs';
+@import '../../../styles/mixins';
 
 .tabs_content {
   margin-top: 50px;
@@ -15,16 +15,27 @@
     right: 10%;
   }
 
-  @media screen and (max-width: 812px) {
+  @media screen and (max-width: $breakpoint-up-md) {
     bottom: 50px;
     top: auto;
+    left: 200px;
+  }
+
+  @media screen and (max-width: $breakpoint-up-sm) {
+    width: 180px;
+  }
+
+  @media screen and (max-width: $breakpoint-up-xs) {
+    flex-direction: column;
     left: 100px;
   }
 
-  @media screen and (max-width: 575px) {
-    flex-direction: column;
-    left: 95px;
-    width: 180px;
+  &__wrapper {
+    background-color: $white-4;
+    height: 520px;
+    width: 300px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
   }
 
   &__title {
@@ -53,55 +64,33 @@
     border-radius: 30px;
   }
 
-  &__wrapper {
-    background-color: $white-4;
-    height: 520px;
-    width: 250px;
-    padding: 20px 50px 20px 50px;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
-  }
-
   &__wrapper-gr {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    height: 480px;
+    padding: 20px 10px 20px 10px;
+  }
+
+  .wrapper_blue {
+    background-color: rgba(114, 217, 224, 0.979);
+    color: var(--white);
+    border: none;
+    transition: 0.7s all ease;
+
+    :nth-child(2) {
+      background-color: var(--blue);
+      color: $white-1;
+      transition: 0.7s all ease;
+    }
+  }
+
+  .wrapper_def {
+    transition: 0.7s all ease;
 
     background-color: $white-5;
-    height: 480px;
-    width: 250px;
-    padding: 20px 50px 20px 50px;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-  }
-  @keyframes fadeInUp {
-    from {
-      transform: translate3d(0, 40px, 0);
-    }
-
-    to {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
   }
 
-  @-webkit-keyframes fadeInUp {
-    from {
-      transform: translate3d(0, 40px, 0);
-    }
-
-    to {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-
-  .animatedFadeInUp {
-    opacity: 0;
-  }
-
-  .fadeInUp {
-    opacity: 0;
-    animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
+  button {
+    margin-top: 40px;
   }
 }

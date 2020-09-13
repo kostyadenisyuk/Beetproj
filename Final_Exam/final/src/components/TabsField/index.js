@@ -1,37 +1,47 @@
-import React from "react";
-
-// Modules
-
-import "./styles.scss";
+import React from 'react';
 
 // Components
 
-import { Tabs } from "../../components/Tabs";
-import { TabsContent } from "./TabsContent";
+import { Tabs } from '../../components/Tabs';
+import { TabsContent } from './TabsContent';
 
 // ----------------
 
 export const TabsField = () => {
   const tabsLinks = [
     {
-      name: "tabOne",
-      title: "Individual ",
+      name: 'tabOne',
+      title: 'Individual ',
     },
     {
-      name: "tabTwo",
-      title: "Company",
+      name: 'tabTwo',
+      title: 'Company',
     },
   ];
 
   const tabsContent = [
     {
-      name: "tabOne",
+      name: 'tabOne',
 
-      content: () => <TabsContent name={"NELoj"} />,
+      content: () => (
+        <TabsContent
+          name={'Pro'}
+          style="wrapper_def"
+          price="$4.99"
+          btn_name="pro"
+        />
+      ),
     },
     {
-      name: "tabTwo",
-      content: () => <TabsContent name={"Loj"} />,
+      name: 'tabTwo',
+      content: () => (
+        <TabsContent
+          name={'Superman'}
+          style="wrapper_blue"
+          price="$99.99"
+          btn_name="superman"
+        />
+      ),
     },
   ];
 

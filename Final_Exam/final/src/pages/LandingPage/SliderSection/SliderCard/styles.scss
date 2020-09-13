@@ -1,14 +1,19 @@
-@import "../../../../styles/mixins";
+@import '../../../../styles/mixins';
+@import '../../../../styles/configs';
 
 .slider-card {
+  margin-right: 10px !important;
   @include flex-col;
   padding: 100px 0 0 10px;
   background-color: var(--black);
   border-radius: 30px;
-  max-width: 260px;
   width: 100%;
+  max-width: 350px;
 
-  @media screen and (max-width: 1024px) {
+  @include mar-bot;
+  text-align: center;
+
+  @media screen and (max-width: $breakpoint-up-md) {
     max-width: 425px;
     width: 100%;
   }
@@ -18,24 +23,23 @@
     width: 100%;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-up-sm) {
     max-width: 590px;
     width: 100%;
   }
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: $breakpoint-up-xs) {
     max-width: 412px;
     width: 100%;
   }
 
   @media screen and (max-width: 415px) {
-    max-width: 290px;
     width: 100%;
+    max-width: 500px;
   }
 
-  @media screen and (max-width: 376px) {
-    max-width: 250px;
-    width: 100%;
+  &__cards-name {
+    text-transform: uppercase;
   }
 
   img {
