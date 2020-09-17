@@ -69,13 +69,12 @@ export default class HomeSection extends Component {
         <div className="home-section__wrapper">
           <img src={iphone_home} alt="" />
         </div>
-        {isEditModalOpen && (
-          <EditModal
-            onClose={this.toggleModal}
-            title="Edit todo modal"
-            open={isEditModalOpen}
-          />
-        )}
+
+        <EditModal
+          onClose={this.toggleModal}
+          title="Funny video"
+          open={isEditModalOpen}
+        />
       </div>
     );
   }

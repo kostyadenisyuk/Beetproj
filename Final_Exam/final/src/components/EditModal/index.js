@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 
 // Modules
 
@@ -7,6 +8,10 @@ import types from 'prop-types';
 // Components
 
 import { Modal } from '../Modal';
+
+// Components
+
+import { Buttons } from '../Buttons';
 
 // Styles
 
@@ -18,12 +23,16 @@ export const EditModal = props => {
   const { open, onClose, title } = props;
 
   return (
-    <Modal open={open} onClose={onClose} title={title} width="xs">
-      <div className="todo-list__input-block">
-        <input placeholder="Edit todo name" name="todo-input" />
-
-        <div style={{ display: 'flex' }}>
-          <button onClick={onClose}>Cancel</button>
+    <Modal open={open} onClose={onClose} title={title} width="md">
+      <div className="player-wrapper">
+        <ReactPlayer
+          className="react-player"
+          url="https://www.youtube.com/watch?v=AK26bXWrOvo"
+          width="100%"
+          height="100%"
+        />
+        <div className="close-btn" onClick={onClose}>
+          <Buttons name="Cancel" style="btn--blue" size="btn--lg" />
         </div>
       </div>
     </Modal>

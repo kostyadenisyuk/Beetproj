@@ -36,8 +36,10 @@
     }
 
     @media screen and (max-width: $breakpoint-up-md) {
-      width: 100%;
-      max-width: 720px;
+      max-width: 1000px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
   }
 
@@ -49,6 +51,10 @@
     text-transform: uppercase;
     margin-left: 78px;
     margin-bottom: 5px;
+
+    @media screen and (max-width: $breakpoint-up-md) {
+      margin-left: 0;
+    }
   }
 
   &__info {

@@ -27,7 +27,7 @@ export const ChooseSection = () => {
 
         <div className="choose-section__info-wrapper">
           <p>Have a bigger team?</p>
-          <a> Let‘s talk</a>
+          <a href="#"> Let‘s talk</a>
         </div>
       </div>
     </div>

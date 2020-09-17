@@ -31,7 +31,7 @@ export class SliderSection extends React.Component {
       speed: 500,
       slidesToShow: 3,
       slidedToScroll: 3,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
       arrows: true,
       nextArrow: (

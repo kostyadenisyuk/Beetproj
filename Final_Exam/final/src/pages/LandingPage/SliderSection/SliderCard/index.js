@@ -14,7 +14,7 @@ export const SliderCard = props => {
   const { slider_photo } = props;
   return (
     <div className="slider-card">
-      <img src={slider_photo} />
+      <img src={slider_photo} alt="slider_photo" />
       <h4>New Providence is the great UI kit </h4>
       <p>
         “Just then her head struck against the roof of the hall: in fact she was

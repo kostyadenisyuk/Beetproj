@@ -23,7 +23,7 @@ export const Footer = props => {
       <div className="footer__wrapper">
         <div className="footer__left-column">
           <div>
-            <img src={logo} />
+            <img src={logo} alt="footer_logo" />
           </div>
 
           <p>
@@ -32,7 +32,7 @@ export const Footer = props => {
           </p>
 
           <div className="left-column__wrapper">
-            <img src={apple} />
+            <img src={apple} alt="apple_logo" />
           </div>
           <div className="footer__logo-wrapper">
             {list.map((item, index) => {
@@ -48,26 +48,26 @@ export const Footer = props => {
         <div className="footer__wrapper-info">
           <div className="footer__info-column">
             <p>Learn more</p>
-            <a>How it works?</a>
-            <a>Meeting tools</a>
-            <a>Live striming</a>
-            <a>Contat method</a>
+            <a href="#">How it works?</a>
+            <a href="#">Meeting tools</a>
+            <a href="#">Live striming</a>
+            <a href="#">Contat method</a>
           </div>
 
           <div className="footer__info-column">
             <p>About us</p>
-            <a>About us</a>
-            <a>Features</a>
-            <a>Privacy police</a>
-            <a>Terms & Conditions</a>
+            <a href="#">About us</a>
+            <a href="#">Features</a>
+            <a href="#">Privacy police</a>
+            <a href="#">Terms & Conditions</a>
           </div>
 
           <div className="footer__info-column">
             <p>Support</p>
-            <a>F.A.Q.</a>
-            <a>Contact us</a>
-            <a>Live chat</a>
-            <a>Phone call</a>
+            <a href="#">F.A.Q.</a>
+            <a href="#">Contact us</a>
+            <a href="#">Live chat</a>
+            <a href="#">Phone call</a>
           </div>
         </div>
       </div>

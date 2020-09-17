@@ -45,6 +45,14 @@
 
     @media screen and (max-width: $breakpoint-up-xs) {
       @include flex-col;
+
+      :nth-child(4) {
+        display: none;
+      }
+
+      :nth-child(5) {
+        display: none;
+      }
     }
   }
 }

@@ -30,6 +30,10 @@
       :first-child {
         margin-right: 20px;
       }
+
+      @media screen and (max-width: $breakpoint-up-md) {
+        justify-content: center;
+      }
     }
   }
 
@@ -39,10 +43,11 @@
     text-align: left;
     @media screen and (max-width: $breakpoint-up-md) {
       max-width: 100%;
+      text-align: center;
     }
 
     p {
-      font-size: 1.25rem;
+      font-size: 1rem;
       line-height: 1.25rem;
     }
 

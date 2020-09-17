@@ -25,7 +25,9 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-around;
-    text-align: left;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
 
     p {
       margin: 0px 5px 0px 0px;
@@ -61,6 +63,11 @@
 
     :only-child {
       margin-right: 10px;
+    }
+
+    @media screen and (max-width: $breakpoint-up-xs) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -105,7 +112,7 @@
       margin-right: 0;
     }
 
-    @media screen and (max-width: $breakpoint-up-xs) {
+    @media screen and (max-width: $breakpoint-up-sm) {
       flex-direction: column;
     }
   }

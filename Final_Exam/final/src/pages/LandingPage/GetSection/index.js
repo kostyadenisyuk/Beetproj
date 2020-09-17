@@ -22,8 +22,8 @@ export const GetSection = () => {
       <Input value={'Send invite'} />
       <p>Or download from</p>
 
-      <a className="get-section__wrapper-img">
-        <img src={apple} />
+      <a className="get-section__wrapper-img" href="#">
+        <img src={apple} alt="apple_logo" />
       </a>
     </div>
   );

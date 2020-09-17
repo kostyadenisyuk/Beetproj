@@ -16,7 +16,7 @@ export const ModalHeader = props => {
   return onClose || title ? (
     <div className="modal-header">
       {title && <p className="modal-header__title">{title}</p>}
-      {onClose && <p>Wait</p>}
+      {onClose && <p></p>}
     </div>
   ) : null;
 };

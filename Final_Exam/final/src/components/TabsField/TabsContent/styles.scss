@@ -6,8 +6,8 @@
   margin-top: 50px;
   position: absolute;
   max-width: 500px;
-  top: 0;
-  right: 15%;
+  top: -45px;
+  right: 10%;
   @include center;
   padding-top: 160px;
 
@@ -16,18 +16,23 @@
   }
 
   @media screen and (max-width: $breakpoint-up-md) {
-    bottom: 50px;
+    bottom: 145px;
     top: auto;
-    left: 200px;
+    left: 270px;
   }
 
   @media screen and (max-width: $breakpoint-up-sm) {
     width: 180px;
+    bottom: 60px;
   }
 
   @media screen and (max-width: $breakpoint-up-xs) {
     flex-direction: column;
-    left: 100px;
+    left: 183px;
+  }
+
+  @media screen and (max-width: $breakpoint-up-xxs) {
+    left: 95px;
   }
 
   &__wrapper {

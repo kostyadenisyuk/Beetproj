@@ -18,7 +18,7 @@ export const HackSection = () => {
   return (
     <div className="hack-section" id="help">
       <div className="hack-section__phone-wrapper">
-        <img src={phone} />
+        <img src={phone} alt="background_img" />
       </div>
 
       <div className="hack-section__wrapper">

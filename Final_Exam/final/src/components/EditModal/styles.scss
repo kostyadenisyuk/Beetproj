@@ -5,7 +5,26 @@
   height: 100%;
   padding: 0.5rem 1.5rem;
   border-bottom: 1px solid #f1f1f1;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.close-btn {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 20%;
 
   @media screen and (max-width: $breakpoint-up-sm) {
+    display: block;
   }
 }
