@@ -27,7 +27,7 @@ export const EditModal = props => {
       <div className="player-wrapper">
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=AK26bXWrOvo"
+          url="https://www.youtube.com/watch?v=v_m7gqsISlE"
           width="100%"
           height="100%"
         />
